@@ -1,0 +1,40 @@
+
+project:
+  name: "African Internal Migration Analysis"
+  version: "1.0.0"
+  description: "Data analysis and human mobility simulation across African countries"
+
+data:
+  raw_dir: "data/raw"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+
+  file_format: "csv"
+  encoding: "utf-8"
+
+analysis:
+  countries: "all"
+  migration_type: "internal"
+  missing_values: "check"
+  remove_duplicates: true
+
+geospatial:
+  enabled: true
+  coordinate_system: "EPSG:4326"
+
+network_analysis:
+  enabled: true
+  directed: true
+
+simulation:
+  enabled: false
+  framework: "NetLogo"
+  model_type: "Agent-Based Model"
+
+output:
+  results_dir: "outputs"
+  figures_dir: "outputs/figures"
+  reports_dir: "outputs/reports"
+
+logging:
+  level: "INFO"
